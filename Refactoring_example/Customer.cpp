@@ -17,6 +17,18 @@ string Customer::statement() {
 	return result;
 }
 
+string Customer::statement_short() {
+	string result = "Прокат " + getName() + "\n";
+
+
+	// Добавление колонтитула
+	result += "Сумма задолженности: " +
+		to_string(getTotalCharge()) + "\n";
+	result += "Вы заработали " + to_string(getBonusPoints()) +
+		" бонусных очков";
+	return result;
+}
+
 double Customer::getTotalCharge() {
 	double totalAmount = 0;
 	for (auto& each : _rentals) {
@@ -30,7 +42,7 @@ int Customer::getBonusPoints() {
 	for (auto& each : _rentals) {
 		bonusPoints += each.getBonus();
 	}
-
+	return bonusPoints;
 }
 
 

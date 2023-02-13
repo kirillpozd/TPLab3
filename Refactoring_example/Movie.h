@@ -35,5 +35,7 @@ public:
 	string getTitle() {
 		return _title;
 	}
+	double getCharge(int daysRented);
+	int getBonus(int daysRented);
 };
 

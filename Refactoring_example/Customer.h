@@ -21,6 +21,7 @@ public:
 		return _name;
 	}
 	string statement();
+	string statement_short();
 	double getTotalCharge();
 	int getBonusPoints();
 };
