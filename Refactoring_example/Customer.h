@@ -21,6 +21,7 @@ public:
 		return _name;
 	}
 	string statement();
-	int bonusFor(Rental& each);
+	double getTotalCharge();
+	int getBonusPoints();
 };
 
